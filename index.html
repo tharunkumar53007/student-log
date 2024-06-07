@@ -1,0 +1,316 @@
+<head>
+
+<link rel="icon" href="png-logos-1.png">
+
+    <title>STUDENT FORM</title>
+    
+    
+    
+    
+    
+    
+    <style>
+       
+    
+    
+        form{
+            display: flex;
+            justify-content:center;
+            flex-wrap: wrap;
+            width: 100%;
+           
+           
+           
+        }
+    
+        body{
+            display:block;
+            flex-wrap: wrap;
+            width: 100%;
+            
+            
+            
+        }
+    
+        #sith{
+            background-color: rgb(255, 255, 100);
+        }
+    
+        th{
+            cursor: default;
+        }
+        h1{
+            cursor: default;
+            font-family: "Audiowide", sans-serif;
+            font-size: x-large;
+      font-weight:400;
+      font-style: normal;
+      display: flex;
+            justify-content:center;
+            flex-wrap: wrap;
+        }
+        h2{
+            cursor: default;
+        
+      font-family: "Audiowide", sans-serif;
+      font-weight: 400;
+      font-style: normal; 
+      display: flex;
+            justify-content:center;
+            flex-wrap: wrap;
+    
+    
+        }
+    
+        #reset{
+            background-color: rgb(231, 86, 34);
+            color: whitesmoke;
+            width: 100%;
+            cursor: pointer;
+            height: 100%;
+            font-weight: bold;
+            
+        }
+    
+        #reset:hover{
+            background-color: rgb(255, 1, 1);
+        }
+    
+        #submit{
+            background-color: lightgrey;
+            color: rgb(0, 0, 0);
+           
+           
+            width: 100%;
+            cursor: pointer;
+            height: 100%;
+    
+        }
+    
+        #submit:hover{
+            background-color: rgb(18, 224, 18);
+            font-weight: 600;
+            color: rgb(26, 11, 11);
+        }
+    
+        #delete{
+            background-color: lightgray;
+            color: black;
+            width: 100%;
+            font-weight: bold;
+            cursor: pointer;
+           
+        }
+        #delete:hover{
+            background-color: red;
+            color: whitesmoke;
+        }
+    
+        #tbody{
+           
+      font-weight: bold;
+      font-style: normal;
+      text-align: center;
+        }
+    
+        #t1{
+            height: 250px;
+            width:350px;
+            margin-bottom: 10px;
+        }
+    
+        
+    
+        #name,#age,#mail{
+            width: 100%;
+            height: 100%;
+        }
+    
+        #male,#female{
+            cursor: pointer;
+        }
+    
+        #course{
+    
+            cursor: pointer;
+        }
+    
+       
+    
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    </head>
+    
+    
+    <body>
+    
+    <h1>STUDENT FORM</h1>
+    
+    
+    <form id="form1">
+       
+        <table border="1" id="t1">
+            <tr>
+                <th>Name :</th>
+                <td>
+                    <input type="text" id="name" placeholder="Enter Your Name ">
+                </td>
+            </tr>
+            <tr>
+                <th>Age :</th>
+                <td>
+                    <input type="number" id="age" placeholder="Enter Your Age">
+                </td>
+            </tr>
+    
+            <tr>
+                <th>Gender :</th>
+                <td>
+                    <input type="radio" value="Male" name="gen" id="male">Male
+                    <input type="radio" value="Female" name="gen" id="female">Female
+                </td>
+            </tr>
+            <tr>
+                <th>Course :</th>
+                <td>
+                    <select style="width: 100%; height: 100%;" id="course" >
+                        <option value="" disabled selected>None</option>
+                        <option>Javascript</option>
+                        <option>Python</option>
+                        <option>Data Science</option>
+                        <option>Mechine Learning</option>
+                        <option>Artificial Intellegent (AI)</option>
+                        <option>DBMS</option>
+                    </select>
+                </td>
+            </tr>
+    
+            <tr>
+                <th>E-Mail :</th>
+                <td>
+                    <input type="text" id="mail" placeholder="Enter Your Email Address">
+                </td>
+            </tr>
+    
+            <tr>
+                <td colspan="2">
+                <button type="reset" onclick="getreset(event)" id="reset">Reset</button>
+                
+                </td>
+            </tr>
+    
+            <tr>
+                <td colspan="2">
+                    <button type="button" id="submit" onclick="update()">Submit</button>
+                </td>
+            </tr>
+    
+        </table>
+    
+        
+    </form>
+    
+    <hr>
+    
+    <h2>STUDENT INFO</h2>
+    
+    <form id="form2">
+    
+        <table border="1" id="t2">
+            
+            <thead>
+                <tr id="sith">
+                    <th>NAME</th>
+                    <th>AGE</th>
+                    <th>COURSE</th>
+                    <th>GENDER</th>
+                    <th>E-MAIL</th>
+                    <th>ACTION</th>
+                </tr>
+                
+            </thead>
+            <tbody id="tbody">
+    
+            </tbody>
+        
+    </table>
+    </form>
+    
+    </body>
+    
+    
+    <script>
+            function update(){
+    
+        const name=document.getElementById("name").value
+        const age=document.getElementById("age").value
+        let gender=''
+    
+        const maleRadio=document.getElementById("male")
+        const femaleRadio=document.getElementById("female")
+        const course=document.getElementById("course").value
+        const mail=document.getElementById("mail").value
+    
+    
+        if(maleRadio.checked)
+        {
+            gender=maleRadio.value;
+        }
+        else if(femaleRadio.checked)
+        {
+            gender=femaleRadio.value;
+        }
+    
+        if(!name || !age || !gender ||!course || !mail){
+            alert("Fill All The Informations")
+        }else{
+    
+        const trElement=document.createElement("tr")
+        const tdname=document.createElement("td")
+        const tdage=document.createElement("td")
+        const tdgender=document.createElement("td")
+        const tdcourse=document.createElement("td")
+        const tdmail=document.createElement("td")
+        const tddel=document.createElement("td")
+    
+        tdname.innerHTML=name;
+        tdage.innerHTML=age;
+        tdcourse.innerHTML=course;
+        tdgender.innerHTML=gender;
+        tdmail.innerHTML=mail;
+        tddel.innerHTML="<button onclick='getdel(event)' id='delete'>Delete</button>"
+    
+        trElement.appendChild(tdname)
+        trElement.appendChild(tdage)
+        trElement.appendChild(tdcourse)
+        trElement.appendChild(tdgender)
+        trElement.appendChild(tdmail)
+        trElement.appendChild(tddel)
+    
+        document.querySelector("#tbody").appendChild(trElement)
+    
+    
+    
+    }
+            }
+    
+    function getdel(event)
+    {
+        event.target.parentElement.parentElement.remove()
+    }
+    
+    function getreset(event)
+    {
+        event.target.parentElement.parentElement.reset()
+    }
+    
+    
+    
+    </script>
